@@ -320,9 +320,9 @@ class _HttpImageState extends State<HttpImage> {
                       future: image,
                       builder: (context, snapshot) {
                         if (snapshot.hasData && isModel == 1) {
-                          return Image.file(File(snapshot.requireData.path));
+                          return Image.file(File(snapshot.requireData.path),height:300.0, width: 300.0,);
                         } else if (snapshot.hasData && isModel == 0) {
-                          return Image.file(File(snapshot.requireData.path));
+                          return Image.file(File(snapshot.requireData.path),height:300.0, width: 300.0,);
                         } else {
                           return const Text("not");
                         }
